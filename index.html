@@ -63,11 +63,10 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
 }
 .display-hero{
   font-weight:800;
-  /* scales perfectly from small phones -> desktop */
   font-size: clamp(1.6rem, 6.2vw, 2.8rem);
   line-height: clamp(1.2, 1.1, 1.1);
-  text-wrap: balance;         /* better multi-line breaks */
-  max-width: 26ch;            /* short, readable line-length on mobile */
+  text-wrap: balance;
+  max-width: 26ch;
   margin-bottom:.6rem;
 }
 .display-hero .text-electric{color:var(--electric)}
@@ -127,13 +126,6 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
 .btn-tag{ display:inline-flex; align-items:center; gap:.35rem; padding:.3rem .6rem; border-radius:999px; font-size:.78rem; font-weight:700;
   border:1px solid rgba(255,255,255,.12); background:rgba(41,121,255,.10); color:#cfe4ff }
 
-/* Process */
-.process-flow{ position:relative; padding:26px; border-radius:18px; background:linear-gradient(180deg, var(--surface), rgba(255,255,255,.02)); border:1px solid var(--border) }
-.process-line{ position:absolute; left:5%; right:5%; top:54%; height:3px;
-  background:linear-gradient(90deg, var(--teal), var(--electric)); filter:drop-shadow(0 0 8px rgba(41,121,255,.7));
-  transform-origin:left center; animation: lineGrow 2.6s ease-in-out infinite alternate; }
-@keyframes lineGrow{ from{transform:scaleX(.35)} to{transform:scaleX(1)} }
-
 /* Contact */
 .input-gv{ background:rgba(255,255,255,.04)!important; border:1px solid rgba(255,255,255,.12)!important; color:#e8eeff!important }
 .input-gv:focus{ border-color:rgba(41,121,255,.6)!important; box-shadow:0 0 0 .25rem rgba(41,121,255,.15)!important }
@@ -147,8 +139,8 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
 /* MOBILE TUNING */
 @media (max-width: 576px){
   .section{ padding:56px 0 } .section-sm{ padding:44px 0 }
-  .hero{ padding: 14px 0 86px }                    /* extra bottom so WA button never overlaps text */
-  .hero .col-lg-6:first-child{ padding-right:6px } /* tidy edge */
+  .hero{ padding: 14px 0 86px }
+  .hero .col-lg-6:first-child{ padding-right:6px }
   .hero .cta-wrap > a{ width:100%; justify-content:center; padding:1rem 1.05rem }
   header lottie-player{ height:220px !important; margin-top:.4rem }
   #process .row > [class*="col-"]{ flex:0 0 50%; max-width:50% }
@@ -174,9 +166,10 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <!-- NEW: GHL SECTION LINK -->
+        <li class="nav-item"><a class="nav-link" href="#ghl">GHL Automation</a></li>
         <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="#work">Our Work</a></li>
-      
       </ul>
       <div class="ms-lg-3 mt-3 mt-lg-0 d-flex gap-2">
         <a class="btn btn-ghost btn-sm" href="mailto:ghlexperts333@gmail.com"><i class="bi bi-envelope me-1"></i> Contact</a>
@@ -195,20 +188,28 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
         <h1 class="display-hero">
           We Help Businesses Grow with <span class="text-electric">Ads</span>, <span class="text-teal">Funnels</span>, SEO & Automation.
         </h1>
-        <p class="lead">One system that captures leads, follows up 24/7, books appointments, and tracks results.</p>
+        <!-- UPDATED: mention GoHighLevel explicitly -->
+        <p class="lead">
+          One system that captures leads, follows up 24/7, books appointments, and tracks results —
+          all built inside GoHighLevel.
+        </p>
         <ul class="hero-list">
           <li><i class="bi bi-check2-circle"></i><span>3× better funnel conversion</span></li>
           <li><i class="bi bi-check2-circle"></i><span>Automated follow-ups & fewer no-shows</span></li>
-          <li><i class="bi bi-check2-circle"></i><span>Live dashboard: see what’s working</span></li>
+          <li><i class="bi bi-check2-circle"></i><span>Live dashboard inside your GHL account</span></li>
         </ul>
         <div class="d-flex gap-2 flex-wrap cta-wrap">
           <a href="https://api.leadconnectorhq.com/widget/bookings/growthverse" target="_blank" rel="noopener" class="btn btn-gv"><i class="bi bi-calendar3 me-2"></i>Book a Free Consultation</a>
           <a href="https://wa.me/923097502122?text=Hi%20GrowthVerse%2C%20I%27d%20like%20a%20quick%20growth%20audit." target="_blank" rel="noopener" class="btn btn-ghost"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
         </div>
+        <!-- Small GHL-focused line -->
+        <small class="text-secondary d-block mt-2">
+          We work directly inside your GoHighLevel sub-account or help you migrate to GHL.
+        </small>
       </div>
       <div class="col-lg-6 text-center">
         <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_touohxv0.json" background="transparent" speed="0.7" style="width:100%;max-width:520px;height:420px" loop autoplay></lottie-player>
-        <small class="text-secondary d-block">Ads → Funnel → CRM → Automation → Client Growth</small>
+        <small class="text-secondary d-block">Ads → Funnel → GoHighLevel CRM → Automation → Client Growth</small>
       </div>
     </div>
   </div>
@@ -270,8 +271,71 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
       <div class="col-md-6 col-lg-3"><div class="card-gv p-4 h-100">
         <div class="icon-wrap mb-3"><i class="bi bi-robot"></i></div>
         <h5 class="fw-bold">Automation (GHL)</h5>
-        <p class="text-secondary">Automate follow-ups, nurture leads, and close sales 24/7.</p>
+        <p class="text-secondary">Automate follow-ups, nurture leads, and close sales 24/7 with GoHighLevel.</p>
       </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3.5 GHL AUTOMATION (NEW SECTION) -->
+<section id="ghl" class="section">
+  <div class="container container-narrow">
+    <div class="text-center mb-5">
+      <p class="section-kicker">GoHighLevel Experts</p>
+      <h2 class="section-title mt-2">Your GoHighLevel, Built & Managed for You.</h2>
+      <p class="text-secondary">
+        GrowthVerse works directly inside your GoHighLevel account to set up pipelines, workflows, calendars,
+        2-way SMS, and dashboards — so the only job is to show up to booked calls.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-4">
+        <div class="card-gv p-4 h-100">
+          <div class="icon-wrap mb-3"><i class="bi bi-kanban"></i></div>
+          <h5 class="fw-bold">Pipeline & CRM Setup</h5>
+          <p class="text-secondary mb-0">
+            Custom pipelines, opportunity stages, tags, and deal flows built around the existing sales process.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-gv p-4 h-100">
+          <div class="icon-wrap mb-3"><i class="bi bi-diagram-3"></i></div>
+          <h5 class="fw-bold">Workflows & Automations</h5>
+          <p class="text-secondary mb-0">
+            Fully automated workflows with email, SMS, WhatsApp, task creation, and conditional logic that
+            move leads through the pipeline automatically.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-gv p-4 h-100">
+          <div class="icon-wrap mb-3"><i class="bi bi-calendar3"></i></div>
+          <h5 class="fw-bold">Calendars, Forms & Surveys</h5>
+          <p class="text-secondary mb-0">
+            Booking calendars, forms, and surveys embedded in funnels, all synced with GHL and integrated
+            with reminder & no-show workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-gv p-3 p-md-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-8">
+          <h5 class="fw-bold mb-1">Done-For-You GoHighLevel Implementation</h5>
+          <p class="text-secondary mb-0">
+            New to GHL or already using it? GrowthVerse audits the current setup, fixes broken automation,
+            creates missing workflows, and documents everything so the team knows exactly how the system works.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="https://api.leadconnectorhq.com/widget/bookings/growthverse" target="_blank" rel="noopener" class="btn btn-gv btn-sm">
+            <i class="bi bi-calendar3 me-2"></i>Book GHL Audit Call
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -369,7 +433,7 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
       <div class="col-md-6"><div class="card-gv p-4 h-100">
         <div class="d-flex align-items-center justify-content-between mb-2">
           <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <small class="text-secondary">Verified</small>
+          <small class="text-secondary">Verified</small>
         </div>
         <p class="mb-0">“Their GHL automations saved our team hours every week.”</p>
       </div></div>
@@ -382,7 +446,7 @@ header,section{ scroll-margin-top: calc(var(--nav-h) + 10px) }
   <div class="container container-narrow">
     <div class="card-gv p-4 p-md-5 text-center" style="background:linear-gradient(180deg, rgba(41,121,255,.12), rgba(0,191,165,.10)); border-color:rgba(255,255,255,.16)">
       <h2 class="fw-bold mb-2">We Don’t Just Market — We Build Systems That Grow Your Business.</h2>
-      <p class="text-secondary mb-4">Let’s connect Ads, Funnels, SEO, and Automation into one engine.</p>
+      <p class="text-secondary mb-4">Let’s connect Ads, Funnels, SEO, and GoHighLevel Automation into one engine.</p>
       <div class="d-flex justify-content-center gap-2 flex-wrap">
         <a class="btn btn-gv" href="https://api.leadconnectorhq.com/widget/bookings/growthverse" target="_blank" rel="noopener"><i class="bi bi-calendar3 me-2"></i>Book a Free Consultation</a>
         <a class="btn btn-ghost" href="https://wa.me/923097502122?text=Hi%20GrowthVerse%2C%20I%27d%20like%20a%20quick%20growth%20audit." target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
